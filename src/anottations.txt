@@ -1,0 +1,59 @@
+npm init -y => inicializar a pasta
+npm add express => instalar o express (rotas)
+npm add typescript -D => instalar typescript (-D em desenvolvimento)
+npx tsc --init => criar i tsconfig pra transpilar
+npm add ts-node-dev -D (-D em desenvolvimento) => Compilar o TS
+Cria no package json =>
+---
+"scripts": {
+    "dev": "ts-node-dev src/server/ts"
+  }
+---
+criar migrations :: npx typeorm migration:create -n CreateUsers
+run na migrations :: npm run typeorm migration:run
+
+desfazer a ultima migrations :: npm run typeorm migration:revert
+
+
+
+------------------------------------------------------------------
+ RODAR A APLICACAO :::: npm run dev
+------------------------------------------------------------------
+
+instalar testes (Jest) :
+
+npm add  jest @types/jest -D
+
+start config dos testes
+npx jest --init
+
+npm add ts-jest -D -- preset pra trabalhar com typescript nos testes
+
+npm test => iniciar teste do jest
+
+
+testar integracao api => 
+npm add supertest @types/supertest -D
+
+=> Envio de email 
+npm add nodemailer
+
+
+==> linguem de template
+npm add handlebars
+
+
+==> Validacao 
+npm install -S yup
+
+
+
+//*** LOGAR AS QUERYS
+no ormconfig
+"logging" : true
+
+
+Lidar com erros =>
+npm add express-async-errors
+
+
